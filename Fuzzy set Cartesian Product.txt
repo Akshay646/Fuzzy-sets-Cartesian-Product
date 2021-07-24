@@ -1,0 +1,51 @@
+
+//@Author: Akshay Yadav 
+
+#include <bits/stdc++.h>
+#define loop(n) for(int i=0;i<n;i++)
+#define loop2(n) for(int j=0;j<n;j++)
+#define f float
+using namespace std;
+
+void cartesian(f a[], f b[], int l1, int l2){
+    f cartesian[l1][l2];
+    
+    cout<<" cartesian product of AXB is="<<"\n";
+    
+    loop(l1){
+        loop2(l2){
+            if(a[i]<b[j])
+                cartesian[i][j]=a[i];
+            else
+                cartesian[i][j]=b[j];
+                }
+            }
+            
+    loop(l1){
+        loop2(l2){
+                    printf("\t%f",cartesian[i][j]);
+                }
+                
+                    cout<<"\n";
+            
+            } 
+}
+
+
+signed main()
+{
+  
+  int l1,l2;
+  cin >> l1 >> l2;
+  f a[l1], b[l2];
+  loop(l1){
+      cin >> a[i];
+  }
+  
+  loop2(l2){
+      cin >> b[j];
+  }
+   cartesian(a, b, l1, l2);
+
+  return 0;
+}
